@@ -1,0 +1,27 @@
+.navbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 7vh;
+  margin-bottom: 10px;
+  /* border: 1px solid white; */
+}
+
+.navbarLogo {
+  height: 7vh;
+  object-fit: contain;
+  padding: 7px 0px;
+  /* border: 1px solid white; */
+}
+
+.navbarName {
+  /* border: 1px solid white; */
+  line-height: 7vh;
+  padding: 0px 5px;
+}
