@@ -1,0 +1,19 @@
+.fullPage {
+  height: 420px;
+}
+
+.parallax {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 8px;
+  perspective-origin: 0%;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  transform: translateZ(0px);
+}
