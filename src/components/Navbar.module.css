@@ -14,14 +14,13 @@
 }
 
 .navbarLogo {
-  height: 7vh;
+  height: 6vh;
   object-fit: contain;
-  padding: 7px 0px;
+  padding: 5px 0px;
   /* border: 1px solid white; */
 }
 
 .navbarName {
   /* border: 1px solid white; */
   line-height: 7vh;
-  padding: 0px 5px;
 }

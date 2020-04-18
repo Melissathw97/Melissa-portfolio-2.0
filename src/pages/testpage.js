@@ -1,6 +1,8 @@
 import React from 'react'
+import styles from './testpage.module.css'
+import whatever from '../assets/images/nextAcademy.jpg'
 
-const test = () => {
+const testpage = () => {
   var bottles = 10
   function ninetyNineBeers() {
     while (bottles >= 0) {
@@ -18,12 +20,17 @@ const test = () => {
   }
 
   return (
-    <div style={{ backgroundColor: "white" }}>
-      <button onClick={ninetyNineBeers}>click me</button>
+    <div className={styles.fullPage}>
+      <div className={styles.parallax}>
+        <div className={styles.background}>
+          <img src={whatever} />
+        </div>
+      </div>
+      <div style={{ backgroundColor: "white" }}>
+        <button onClick={ninetyNineBeers}>click me</button>
+      </div>
     </div>
   )
 }
 
-export default test
-
-
+export default testpage

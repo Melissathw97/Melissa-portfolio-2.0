@@ -2,16 +2,20 @@ import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
 import Mainpage from './pages/Mainpage.js'
-import Test from './pages/test.js'
 
 function App() {
+  const ScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }
+
   return (
     <div className="App">
       <Route exact path="/">
-        <Mainpage />
-      </Route>
-      <Route path="/test">
-        <Test />
+        <Mainpage
+          ScrollToTop={ScrollToTop} />
       </Route>
     </div>
   );
