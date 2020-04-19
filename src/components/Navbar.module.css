@@ -5,22 +5,34 @@
   left: 0;
   width: 100vw;
   background-color: black;
+  height: 7vh;
+  margin-bottom: 10px;
+}
+
+.navMenu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 7vh;
-  margin-bottom: 10px;
-  /* border: 1px solid white; */
+  cursor: pointer;
 }
 
 .navbarLogo {
   height: 6vh;
   object-fit: contain;
   padding: 5px 0px;
-  /* border: 1px solid white; */
 }
 
 .navbarName {
-  /* border: 1px solid white; */
   line-height: 7vh;
+}
+
+.navbarT {
+  line-height: 7vh;
+  margin-right: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbarT {
+    margin-right: 6px;
+  }
 }
