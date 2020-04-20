@@ -61,7 +61,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
                   to={{
                     left: '5vw',
                     top: '60vh',
-                    opacity: '0.9',
+                    opacity: '0.7',
                     scale: '1',
                     transform: 'rotate(-50deg)'
                   }}
@@ -91,7 +91,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
                   to={{
                     right: '10vw',
                     top: '10vh',
-                    opacity: '0.9',
+                    opacity: '0.8',
                     scale: '0.5',
                     transform: 'rotate(-30deg)'
                   }}
@@ -115,13 +115,13 @@ const Mainpage2 = ({ ScrollToTop }) => {
                       <i class={`fas fa-envelope ${styles.contactIcon}`}></i>melissathw97@gmail.com
                     </p>
                     <p>
-                      <a href="https://github.com/Melissathw97" target="_blank">
+                      <a href="https://github.com/Melissathw97" target="_blank" className={styles.contactLink}>
                         <i className={`fab fa-github ${styles.contactIcon}`}></i>
                         github.com/Melissathw97
                       </a>
                     </p>
                     <p>
-                      <a href="https://www.linkedin.com/in/Melissathw/" target="_blank">
+                      <a href="https://www.linkedin.com/in/Melissathw/" target="_blank" className={styles.contactLink}>
                         <i className={`fab fa-linkedin ${styles.contactIcon}`}></i>
                         linkedin.com/in/Melissathw
                       </a>
@@ -133,6 +133,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
           )}
         </Scene>
         <h4 className={styles.timelineTitle}>My timeline.</h4>
+        <div id="trigger" className={styles.trigger} />
         <Scene
           duration={700}
           triggerHook="onEnter"
@@ -157,7 +158,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
         </Scene>
         <Scene
           duration={700}
-          triggerHook="onEnter"
+          triggerElement="#trigger"
           reverse={false}
         >
           <Timeline wrapper={<div className={styles.content} />}>
@@ -172,16 +173,17 @@ const Mainpage2 = ({ ScrollToTop }) => {
               <p>Next Academy</p>
               <p>Full-stack Web Development</p>
               <p className={styles.skills}>HTML, CSS, Javascript, React, Python Flask</p>
-              <div className={styles.box} />
+              <div className={`${styles.box} ${styles.box2}`} />
             </Tween>
           </Timeline>
         </Scene>
+        <div id="trigger2" className={styles.trigger2} />
         <Scene
           duration={700}
           triggerHook="onEnter"
         >
           <Timeline
-            wrapper={<div className={styles.parallax} />}
+            wrapper={<div className={`${styles.parallax} ${styles.parallaxEven}`} />}
           >
             <Tween
               position="0"
@@ -200,10 +202,10 @@ const Mainpage2 = ({ ScrollToTop }) => {
         </Scene>
         <Scene
           duration={700}
-          triggerHook="onEnter"
+          triggerElement="#trigger2"
           reverse={false}
         >
-          <Timeline wrapper={<div className={styles.content} />}>
+          <Timeline wrapper={<div className={styles.contentEven} />}>
             <Tween
               staggerFrom={{
                 opacity: 0,
@@ -214,10 +216,11 @@ const Mainpage2 = ({ ScrollToTop }) => {
               <p>2015 - 2019</p>
               <p>Calvary Church, CCC</p>
               <p>Deputy Stage Manager</p>
-              <div className={styles.box} />
+              <div className={`${styles.box} ${styles.boxEven}`} />
             </Tween>
           </Timeline>
         </Scene>
+        <div id="trigger3" className={styles.trigger3} />
         <Scene
           duration={700}
           triggerHook="onEnter"
@@ -242,7 +245,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
         </Scene>
         <Scene
           duration={700}
-          triggerHook="onEnter"
+          triggerElement="#trigger3"
           reverse={false}
         >
           <Timeline wrapper={<div className={styles.content} />}>
@@ -260,12 +263,13 @@ const Mainpage2 = ({ ScrollToTop }) => {
             </Tween>
           </Timeline>
         </Scene>
+        <div id="trigger4" className={styles.trigger4} />
         <Scene
           duration={700}
           triggerHook="onEnter"
         >
           <Timeline
-            wrapper={<div className={styles.parallax} />}
+            wrapper={<div className={`${styles.parallax} ${styles.parallaxEven}`} />}
           >
             <Tween
               position="0"
@@ -287,7 +291,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
           triggerHook="onEnter"
           reverse={false}
         >
-          <Timeline wrapper={<div className={styles.content} />}>
+          <Timeline wrapper={<div className={styles.contentEven} />}>
             <Tween
               staggerFrom={{
                 opacity: 0,
@@ -298,7 +302,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
               <p>2016 - 2019</p>
               <p>International Medical University (IMU)</p>
               <p>BSc (Hons) Medical Biotechnology</p>
-              <div className={styles.box} />
+              <div className={styles.box2Even} />
             </Tween>
           </Timeline>
         </Scene>
@@ -314,11 +318,11 @@ const Mainpage2 = ({ ScrollToTop }) => {
               }}
               stagger={0.1}
             >
-              <div className={styles.diamond} />
+              <div className={styles.diamond2} />
               <p>2019</p>
               <p>Fisher Scientific (M) Sdn Bhd</p>
               <p>Customer Service Intern</p>
-              <div className={styles.box} />
+              <div className={styles.box3} />
             </Tween>
           </Timeline>
         </Scene>

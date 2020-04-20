@@ -79,7 +79,7 @@
   margin: 30px 0px;
 }
 
-.parallax {
+.parallax, .parallaxEven {
   height: 30vh;
   width: 100vw;
   position: relative;
@@ -91,7 +91,7 @@
   height: auto;
 }
 
-.diamond {
+.diamond, .diamond2, .diamondEven {
   height: 10px;
   width: 10px;
   background-color: white;
@@ -99,7 +99,7 @@
   transform: rotate(45deg);
 }
 
-.content {
+.content, .contentEven {
   padding: 20px;
 }
 
@@ -112,10 +112,10 @@
   font-style: italic;
 }
 
-.box {
+.box, .box2, .box2Even, .box3, .boxEven {
   background: linear-gradient(white, white) no-repeat center/2px 100%;
   height: 20vh;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 0px;
 }
 
@@ -151,6 +151,12 @@
     width: 45vw;
     height: 50vh;
   }
+  
+  .parallaxEven {
+    position: relative;
+    overflow: hidden;
+    left: 55vw;
+  }
 
   .logo2 {
     margin-top: -200px;
@@ -161,8 +167,72 @@
     width: 15vw;
   }
 
-  .back2Top:hover {
-    color: gray;
+  .timelineTitle {
+    margin-bottom: 0px;
+  }
+
+  .trigger, .trigger2, .trigger3, .trigger4 {
+    height: 10vh;
+  }
+
+  .diamond {
+    margin: 10px 0px 15px;
+  }
+
+  .diamond2 {
+    margin: 10px auto 15px;
+  }
+
+  .box {
+    background: none;
+    width: 5px;
+    height: 33vh;
+    border-right: 2px solid white;
+  }
+
+  .box2 {
+    height: 28vh;
+  }
+
+  .boxEven {
+    border-left: 2px solid white;
+    border-right: none;
+  }
+
+  .box2Even {
+    background: none;
+    width: 5px;
+    height: 28vh;
+    border-left: 2px solid white;
+  }
+
+  .box3 {
+    height: 28vh;
+  }
+
+  .content {
+    left: 48%;
+    text-align: left;
+    margin-top: -45vh;
+    padding-top: 10vh;
+    padding-left: 1.7vw;
+    position: absolute;
+  }
+  
+  .contentEven {
+    right: 48%;
+    text-align: right;
+    margin-top: -45vh;
+    padding-top: 10vh;
+    padding-right: 1.7vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .content2 {
+    margin: 22vh 0px -14vh;
   }
 
   .footer {
@@ -170,7 +240,7 @@
     margin: 0 80px;
   }
 
-  .footer a:hover {
+  .contactLink:hover, .back2Top:hover, .footer a:hover {
     text-decoration: none;
     color: gray;
   }
