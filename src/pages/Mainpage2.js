@@ -75,7 +75,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
                   }}
                   to={{
                     right: '5vw',
-                    top: '55vh',
+                    top: '57vh',
                     opacity: '0.9',
                     scale: '0.5',
                     transform: 'rotate(30deg)'
