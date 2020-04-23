@@ -1,6 +1,7 @@
 import React from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
+import Slider from 'react-slick';
 import styles from './Mainpage2.module.css'
 import Navbar from '../components/Navbar'
 import logo from '../assets/images/logowhiteoutline.png'
@@ -12,6 +13,15 @@ import imu from '../assets/images/imu.jpg'
 import pharmacy from '../assets/images/pharmacy.jpg'
 
 const Mainpage2 = ({ ScrollToTop }) => {
+  const settings = {
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    speed: 500,
+    arrows: true
+  }
+
   return (
     <div className={styles.fullPage}>
       <Navbar />
@@ -133,6 +143,151 @@ const Mainpage2 = ({ ScrollToTop }) => {
           )}
         </Scene>
       </Controller>
+      <Controller>
+        <Scene
+          triggerHook="onLeave"
+          duration={600}
+          pin
+        >
+          {(progress) => (
+            <div className={`${styles.sticky} ${styles.sticky2}`}>
+              <h4>My projects.</h4>
+              <div className={styles.projects}>
+                <Timeline totalProgress={progress} paused>
+                  <Tween
+                    from={{
+                      top: '0',
+                      opacity: '0',
+                    }}
+                    to={{
+                      top: '5vh',
+                      opacity: '1',
+                    }}
+                  >
+                    <div className={styles.project}>
+                      5 | Hive
+                  </div>
+                  </Tween>
+                  <Tween
+                    from={{
+                      top: '0',
+                      opacity: '0',
+                    }}
+                    to={{
+                      top: '25vh',
+                      opacity: '1',
+                    }}
+                  >
+                    <div className={`${styles.project} ${styles.project2}`}>
+                      My<br />Next-agram
+                  </div>
+                  </Tween>
+                  <Tween
+                    from={{
+                      top: '0',
+                      opacity: '0',
+                    }}
+                    to={{
+                      top: '45vh',
+                      opacity: '1',
+                    }}
+                  >
+                    <div className={`${styles.project} ${styles.project3}`}>
+                      My<br /> tic-tac-toe
+                  </div>
+                  </Tween>
+                </Timeline>
+
+              </div>
+
+            </div>
+          )}
+        </Scene>
+      </Controller>
+      {/* <div style={{ border: "1px solid white", position: "relative", height: "90vh" }}> */}
+      <div className={styles.projectDetails}>
+        <h6>A group project</h6>
+        <h4 className={styles.projectTitle}>5 | Hive</h4>
+        <p>A fitness buddy mobile app</p>
+        <h6>Features:</h6>
+        <ul className={styles.projectFeatures}>
+          <li>Sign up & log in</li>
+          <li>Look for a buddy/mentor</li>
+          <li>See nearby users</li>
+          <li>Match like tinder</li>
+          <li>Chat with other users</li>
+          <li>Watch trending fitness videos</li>
+        </ul>
+        <div className={styles.projectResponsibility}>
+          <p>Managed UI/UX design using React</p>
+        </div>
+        <div className={styles.projectLinks}>
+          <a href="https://github.com/Melissathw97/5-Hive" target="_blank" className={styles.projectLink}>
+            website
+              <i class={`fas fa-link ${styles.projectIcon}`}></i>
+          </a>
+          <a href="https://github.com/Melissathw97/5-Hive" target="_blank" className={styles.projectLink}>
+            git repo
+              <i className={`fab fa-github ${styles.projectIcon}`}></i>
+          </a>
+        </div>
+        {/* </div> */}
+      </div>
+      {/* <div>
+        <Slider {...settings} className={styles.center}>
+          <div className={styles.sliderDiv}>
+            <h6>A group project</h6>
+            <h4 className={styles.projectTitle}>5 | Hive</h4>
+            <p>A fitness buddy mobile app</p>
+            <h6>Features:</h6>
+            <ul className={styles.projectFeatures}>
+              <li>Sign up & log in</li>
+              <li>Look for a buddy/mentor</li>
+              <li>See nearby users</li>
+              <li>Match like tinder</li>
+              <li>Chat with other users</li>
+              <li>Watch trending fitness videos</li>
+            </ul>
+            <div className={styles.projectResponsibility}>
+              <p>Managed UI/UX design using React</p>
+            </div>
+            <div className={styles.projectLinks}>
+              <a href="https://github.com/Melissathw97/5-Hive" target="_blank" className={styles.projectLink}>
+                website
+              <i class={`fas fa-link ${styles.projectIcon}`}></i>
+              </a>
+              <a href="https://github.com/Melissathw97/5-Hive" target="_blank" className={styles.projectLink}>
+                git repo
+              <i className={`fab fa-github ${styles.projectIcon}`}></i>
+              </a>
+            </div>
+          </div>
+          <div className={styles.sliderDiv}>
+            <h4 className={styles.projectTitle}>My Next-agram</h4>
+            <p>A web imitation of instagram</p>
+            <div className={styles.projectResponsibility}>
+              <p>Python</p>
+              <p>AWS</p>
+            </div>
+            <div className={styles.projectLinks}>
+              <a href="https://github.com/Melissathw97/5-Hive" target="_blank" className={styles.projectLink}>
+                website
+              <i class={`fas fa-link ${styles.projectIcon}`}></i>
+              </a>
+              <a href="https://github.com/Melissathw97/Next-agram" target="_blank" className={styles.projectLink}>
+                git repo
+              <i className={`fab fa-github ${styles.projectIcon}`}></i>
+              </a>
+            </div>
+          </div>
+          <div className={styles.sliderDiv}>
+            <h3>3</h3>
+          </div>
+          <div className={styles.sliderDiv}>
+            <h3>3</h3>
+          </div>
+        </Slider>
+      </div> */}
       <h4 className={styles.sectionTitle}>My timeline.</h4>
       <div className={styles.middleLine}>
         <Controller>
