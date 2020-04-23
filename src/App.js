@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
 // import Mainpage from './pages/Mainpage.js'
-import Mainpage2 from './pages/Mainpage2'
+import Mainpage2 from './pages/Mainpage2';
+
 
 function App() {
   const ScrollToTop = () => {
