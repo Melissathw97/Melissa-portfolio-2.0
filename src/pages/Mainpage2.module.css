@@ -137,8 +137,11 @@
 .projectFeatures {
   font-size: 0.9em;
   text-align: left;
-  margin: 0 auto;
-  width: 65vw;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectResponsibility {
@@ -390,6 +393,17 @@
   .project3 {
     left: 60vw;
     margin-top: -10vh;
+  }
+
+  .closeButton {
+    height: 3vw;
+    width: 3vw;
+    right: 20vw;
+    top: 3vh;
+  }
+
+  .projectDetails {
+    padding: 5vh 30vw;
   }
 
   .parallax {
