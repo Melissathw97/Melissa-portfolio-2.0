@@ -37,7 +37,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .sticky2 {
@@ -121,6 +121,7 @@
   padding: 30px 40px;
   top: 0;
   left: 0;
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .closeButton {
@@ -180,7 +181,6 @@
 .middleLine {
   background: linear-gradient(white, white) no-repeat center/2px 
   100%;
-  /* margin-top: 20vh; */
 }
 
 .parallax, .parallaxEven {
@@ -224,7 +224,7 @@
 }
 
 .skills {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-style: italic;
 }
 
@@ -251,7 +251,7 @@
 }
 
 /* MEDIA QUERY */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 370px) {
   .logo2 {
     width: 50vw;
   }
@@ -261,7 +261,13 @@
   }
 
   .contactInfo {
+    margin-top: 7vh;
     line-height: 10px;
+  }
+
+  .project {
+    height: 39vw;
+    width: 39vw;
   }
 }
 
@@ -273,6 +279,20 @@
 
   .contactInfo {
     margin-top: 15vh;
+  }
+
+  .project {
+    height: 28vw;
+    width: 28vw;
+    left: 20vw;
+  }
+
+  .project2 {
+    left: 35vw;
+  }
+
+  .project3 {
+    left: 50vw;
   }
 
   .parallax {
@@ -294,11 +314,22 @@
     width: 20vw;
   }
 
+  .closeButton {
+    height: 5vw;
+    width: 5vw;
+    right: 20vw;
+    top: 3vh;
+  }
+
+  .projectDetails {
+    padding: 5vh 20vw;
+  }
+
   .timelineTitle {
     margin-bottom: 0px;
   }
 
-  .trigger, .trigger2, .trigger3, .trigger4 {
+  .trigger, .trigger2 {
     height: 15vh;
     margin-bottom: -5vh;
   }
@@ -322,10 +353,6 @@
 
   .diamond2 {
     margin: 10px auto 30px;
-  }
-
-  .skills {
-    font-size: 0.7em;
   }
 
   .content {
@@ -398,8 +425,6 @@
   .closeButton {
     height: 3vw;
     width: 3vw;
-    right: 20vw;
-    top: 3vh;
   }
 
   .projectDetails {
@@ -445,6 +470,19 @@
     opacity: 0.6;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     opacity: 1;
   }
 }

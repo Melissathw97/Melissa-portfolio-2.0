@@ -8,6 +8,8 @@ import nextAcademy from '../assets/images/nextAcademy.jpg'
 import cccsm from '../assets/images/cccSM.jpg'
 import obd from '../assets/images/obd.jpg'
 import imu from '../assets/images/imu.jpg'
+import alumniHomecoming from '../assets/images/alumniHomecoming.jpg'
+import imuCup from '../assets/images/imuCup.jpg'
 import pharmacy from '../assets/images/pharmacy.jpg'
 
 const Mainpage2 = ({ ScrollToTop }) => {
@@ -313,7 +315,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
                       opacity: '0',
                     }}
                     to={{
-                      top: '27vh',
+                      top: '29vh',
                       opacity: '1',
                     }}
                   >
@@ -331,7 +333,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
                       opacity: '0',
                     }}
                     to={{
-                      top: '49vh',
+                      top: '53vh',
                       opacity: '1',
                     }}
                   >
@@ -363,7 +365,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
         <Controller>
           <div id="trigger" className={styles.trigger} />
           <Scene
-            duration={700}
+            duration={1000}
             triggerHook="onEnter"
           >
             <Timeline
@@ -411,7 +413,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
           </Scene>
           <div id="trigger2" className={styles.trigger2} />
           <Scene
-            duration={500}
+            duration={1000}
             triggerHook="onEnter"
           >
             <Timeline
@@ -456,9 +458,9 @@ const Mainpage2 = ({ ScrollToTop }) => {
               </Tween>
             </Timeline>
           </Scene>
-          <div id="trigger3" className={styles.trigger3} />
+          <div id="trigger3" className={styles.trigger2} />
           <Scene
-            duration={700}
+            duration={1000}
             triggerHook="onEnter"
           >
             <Timeline
@@ -503,9 +505,9 @@ const Mainpage2 = ({ ScrollToTop }) => {
               </Tween>
             </Timeline>
           </Scene>
-          <div id="trigger4" className={styles.trigger4} />
+          <div id="trigger4" className={styles.trigger2} />
           <Scene
-            duration={700}
+            duration={1000}
             triggerHook="onEnter"
           >
             <Timeline
@@ -550,7 +552,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
               </Tween>
             </Timeline>
           </Scene>
-          <div id="trigger5" className={styles.trigger5} />
+          <div id="trigger5" className={styles.trigger2} />
           <Scene
             duration={400}
             triggerElement="#trigger5"
@@ -571,10 +573,104 @@ const Mainpage2 = ({ ScrollToTop }) => {
               </Tween>
             </Timeline>
           </Scene>
-          <div id="trigger6" className={styles.trigger6} />
+          <div id="trigger6" className={styles.trigger2} />
+          <Scene
+            duration={1000}
+            triggerHook="onEnter"
+          >
+            <Timeline
+              wrapper={<div className={styles.parallax} />}
+            >
+              <Tween
+                position="0"
+                from={{
+                  yPercent: -20,
+                  scale: 1,
+                }}
+                to={{
+                  yPercent: 0,
+                  scale: 1.1
+                }}
+              >
+                <img
+                  src={alumniHomecoming}
+                  alt="Alumni Homecoming Night"
+                  className={styles.image}
+                />
+              </Tween>
+            </Timeline>
+          </Scene>
+          <Scene
+            duration={400}
+            triggerElement="#trigger6"
+            reverse={false}
+          >
+            <Timeline wrapper={<div className={styles.content} />}>
+              <Tween
+                staggerFrom={{
+                  opacity: 0,
+                }}
+                stagger={0.1}
+              >
+                <div className={styles.diamond} />
+                <p>2018</p>
+                <p className={styles.period}>( May - November )</p>
+                <p>Alumni Homecoming Night, IMU</p>
+                <p>Vice President of Public Relations</p>
+              </Tween>
+            </Timeline>
+          </Scene>
+          <div id="trigger7" className={styles.trigger2} />
+          <Scene
+            duration={1000}
+            triggerHook="onEnter"
+          >
+            <Timeline
+              wrapper={<div className={`${styles.parallax} ${styles.parallaxEven}`} />}
+            >
+              <Tween
+                position="0"
+                from={{
+                  yPercent: -30,
+                  scale: 1,
+                }}
+                to={{
+                  yPercent: -15,
+                  scale: 1.1
+                }}
+              >
+                <img
+                  src={imuCup}
+                  alt="IMU Cup 2018"
+                  className={styles.image}
+                />
+              </Tween>
+            </Timeline>
+          </Scene>
+          <Scene
+            duration={400}
+            triggerElement="#trigger7"
+            reverse={false}
+          >
+            <Timeline wrapper={<div className={styles.contentEven} />}>
+              <Tween
+                staggerFrom={{
+                  opacity: 0,
+                }}
+                stagger={0.1}
+              >
+                <div className={styles.diamond} />
+                <p>2018</p>
+                <p className={styles.period}>( May - November )</p>
+                <p>IMU Cup 2018, IMU</p>
+                <p>Publicity Manager</p>
+              </Tween>
+            </Timeline>
+          </Scene>
+          <div id="trigger8" className={styles.trigger2} />
           <Scene
             duration={500}
-            triggerElement="#trigger6"
+            triggerHook="onEnter"
           >
             <Timeline
               wrapper={<div className={styles.parallax} />}
@@ -600,7 +696,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
           </Scene>
           <Scene
             duration={400}
-            triggerHook="onEnter"
+            triggerElement="#trigger8"
             reverse={false}
           >
             <Timeline wrapper={<div className={styles.content} />}>
@@ -613,8 +709,8 @@ const Mainpage2 = ({ ScrollToTop }) => {
                 <div className={styles.diamond} />
                 <p>2018</p>
                 <p className={styles.period}>( Jan - Jun 2016; Jun 2018; Nov 2018 )</p>
-                <p>Pharmacy Assistant</p>
                 <p>Pharmahome Pharmacy, Penang</p>
+                <p>Pharmacy Assistant</p>
               </Tween>
             </Timeline>
           </Scene>
