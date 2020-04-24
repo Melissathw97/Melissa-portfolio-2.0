@@ -552,7 +552,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
               </Tween>
             </Timeline>
           </Scene>
-          <div id="trigger5" className={styles.trigger2} />
+          <div id="trigger5" className={styles.trigger3} />
           <Scene
             duration={400}
             triggerElement="#trigger5"
@@ -573,7 +573,7 @@ const Mainpage2 = ({ ScrollToTop }) => {
               </Tween>
             </Timeline>
           </Scene>
-          <div id="trigger6" className={styles.trigger2} />
+          <div id="trigger6" className={styles.trigger4} />
           <Scene
             duration={1000}
             triggerHook="onEnter"
