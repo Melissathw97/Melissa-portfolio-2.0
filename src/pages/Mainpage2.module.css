@@ -66,6 +66,7 @@
 
 .contactInfo {
   text-align: left;
+  margin-top: 10vh;
 }
 
 .contactInfo a {
@@ -91,6 +92,7 @@
   height: 40vw;
   width: 40vw;
   border: 4px double white;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,22 +114,31 @@
 }
 
 .projectDetails {
-  position: fixed;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.86);
+  padding: 30px 40px;
   top: 0;
   left: 0;
-  visibility: hidden;
 }
 
-.projectLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 3vh;
+.closeButton {
+  position: absolute;
+  top: 1vh;
+  right: 5vw;
+  background-color: white;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
 .projectFeatures {
   font-size: 0.9em;
   text-align: left;
+  margin: 0 auto;
+  width: 65vw;
 }
 
 .projectResponsibility {
@@ -136,6 +147,14 @@
   padding: 2vh 0 0;
   margin: 5vh 0;
   font-size: 1.1em;
+  line-height: 15px;
+}
+
+.projectLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3vh;
 }
 
 .projectLink {
@@ -356,10 +375,11 @@
   }
 
   .project {
-    height: 200px;
-    width: 200px;
+    height: 15vw;
+    width: 15vw;
     top: 5vh;
     left: 26vw;
+    cursor: pointer;
   }
 
   .project2 {
