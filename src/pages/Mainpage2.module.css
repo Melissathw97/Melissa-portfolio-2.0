@@ -384,9 +384,21 @@
     margin: 0 80px;
   }
 
-  .contactLink:hover, .back2Top:hover, .footer a:hover {
+  .project:hover {
+    background-color: rgb(206, 205, 205);
+    border: 5px double black;
+    color: black;
+    font-weight: bold;
+  }
+
+  .projectLink:hover, .contactLink:hover, .back2Top:hover, .footer a:hover {
     text-decoration: none;
     color: gray;
+  }
+
+  .closeButton:hover {
+    background-color: transparent;
+    color: white;
   }
 
   .back2Top {
