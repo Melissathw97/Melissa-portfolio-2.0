@@ -37,7 +37,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .sticky2 {
@@ -66,6 +66,7 @@
 
 .contactInfo {
   text-align: left;
+  margin-top: 10vh;
 }
 
 .contactInfo a {
@@ -91,6 +92,7 @@
   height: 40vw;
   width: 40vw;
   border: 4px double white;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,22 +114,35 @@
 }
 
 .projectDetails {
-  position: fixed;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.86);
+  padding: 30px 40px;
   top: 0;
   left: 0;
-  visibility: hidden;
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.projectLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 3vh;
+.closeButton {
+  position: absolute;
+  top: 1vh;
+  right: 5vw;
+  background-color: white;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  font-weight: bold;
 }
 
 .projectFeatures {
   font-size: 0.9em;
   text-align: left;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectResponsibility {
@@ -136,6 +151,14 @@
   padding: 2vh 0 0;
   margin: 5vh 0;
   font-size: 1.1em;
+  line-height: 15px;
+}
+
+.projectLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3vh;
 }
 
 .projectLink {
@@ -158,7 +181,6 @@
 .middleLine {
   background: linear-gradient(white, white) no-repeat center/2px 
   100%;
-  /* margin-top: 20vh; */
 }
 
 .parallax, .parallaxEven {
@@ -202,7 +224,7 @@
 }
 
 .skills {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-style: italic;
 }
 
@@ -229,7 +251,7 @@
 }
 
 /* MEDIA QUERY */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 370px) {
   .logo2 {
     width: 50vw;
   }
@@ -239,7 +261,13 @@
   }
 
   .contactInfo {
+    margin-top: 7vh;
     line-height: 10px;
+  }
+
+  .project {
+    height: 39vw;
+    width: 39vw;
   }
 }
 
@@ -251,6 +279,20 @@
 
   .contactInfo {
     margin-top: 15vh;
+  }
+
+  .project {
+    height: 28vw;
+    width: 28vw;
+    left: 20vw;
+  }
+
+  .project2 {
+    left: 35vw;
+  }
+
+  .project3 {
+    left: 50vw;
   }
 
   .parallax {
@@ -272,21 +314,32 @@
     width: 20vw;
   }
 
+  .closeButton {
+    height: 5vw;
+    width: 5vw;
+    right: 20vw;
+    top: 3vh;
+  }
+
+  .projectDetails {
+    padding: 5vh 20vw;
+  }
+
   .timelineTitle {
     margin-bottom: 0px;
   }
 
-  .trigger, .trigger2, .trigger3, .trigger4 {
+  .trigger, .trigger2 {
     height: 15vh;
     margin-bottom: -5vh;
   }
   
-  .trigger5 {
+  .trigger3 {
     margin: 0;
     height: 10vh;
   }
 
-  .trigger6 {
+  .trigger4 {
     height: 15vh;
   }
   
@@ -300,10 +353,6 @@
 
   .diamond2 {
     margin: 10px auto 30px;
-  }
-
-  .skills {
-    font-size: 0.7em;
   }
 
   .content {
@@ -335,9 +384,21 @@
     margin: 0 80px;
   }
 
-  .contactLink:hover, .back2Top:hover, .footer a:hover {
+  .project:hover {
+    background-color: rgb(206, 205, 205);
+    border: 5px double black;
+    color: black;
+    font-weight: bold;
+  }
+
+  .projectLink:hover, .contactLink:hover, .back2Top:hover, .footer a:hover {
     text-decoration: none;
     color: gray;
+  }
+
+  .closeButton:hover {
+    background-color: transparent;
+    color: white;
   }
 
   .back2Top {
@@ -356,10 +417,11 @@
   }
 
   .project {
-    height: 200px;
-    width: 200px;
+    height: 15vw;
+    width: 15vw;
     top: 5vh;
     left: 26vw;
+    cursor: pointer;
   }
 
   .project2 {
@@ -370,6 +432,15 @@
   .project3 {
     left: 60vw;
     margin-top: -10vh;
+  }
+
+  .closeButton {
+    height: 3vw;
+    width: 3vw;
+  }
+
+  .projectDetails {
+    padding: 5vh 30vw;
   }
 
   .parallax {
@@ -411,6 +482,19 @@
     opacity: 0.6;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     opacity: 1;
   }
 }
