@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import styles from './Mainpage.module.css';
@@ -226,7 +226,10 @@ const Mainpage2 = ({ ScrollToTop, overlay, overlayPage, showOverlay, hideOverlay
                   </div>
                   </Tween>
                 </Timeline>
-                <div style={overlay ? { display: "block" } : { display: "none" }} className={styles.projectDetails}>
+                <div
+                  style={overlay ? { display: "block" } : { display: "none" }}
+                  className={styles.projectDetails}
+                >
                   <button
                     className={styles.closeButton}
                     onClick={hideOverlay}
