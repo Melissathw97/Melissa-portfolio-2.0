@@ -1,6 +1,5 @@
-.page {
-  width: 100vw;
-  overflow-x: hidden;
+.fullPage {
+  overflow: hidden;
 }
 
 .welcomePage {
@@ -29,96 +28,360 @@
   animation-delay: 2s;
 }
 
-.page2 {
+.contact {
+  padding: 100px 0px;
+}
+
+.sticky {
+  height: 100vh;
   width: 100vw;
-  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
 }
 
-.page3 {
-  padding-top: 70px;
+.sticky2 {
+  flex-direction: column;
 }
 
-.nextAcademyBox {
-  padding-top: 30px;
-  margin: 0;
-  line-height: 20px;
-}
-
-.nextAcademy {
-  background-color: rgba(255,255,255,0.5);
-  color: black;
+.animation {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
 }
 
-.parallax {
+.logo2 {
+  width: 50vw;
+  position: absolute;
+}
+
+.logo3 {
+  width: 25vw;
+  position: absolute;
+}
+
+.sectionTitle {
+  margin: 30px 0px;
+}
+
+.contactInfo {
+  text-align: left;
+  margin-top: 10vh;
+}
+
+.contactInfo a {
+  color: white;
+}
+
+.contactIcon {
+  font-size: 1.5em;
+  vertical-align: middle;
+  padding: 0 15px 0 0;
+}
+
+.projects {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+
+.project {
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+  height: 40vw;
+  width: 40vw;
+  border: 4px double white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+
+.project2 {
+  top: 25vh;
+  left: 30vw;
+}
+
+.project3 {
+  top: 45vh;
+  left: 50vw;
+}
+
+.projectTitle {
+  line-height: 7vh;
+}
+
+.projectDetails {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.86);
+  padding: 30px 40px;
+  top: 0;
+  left: 0;
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1vh;
+  right: 5vw;
+  background-color: white;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.middleLine {
+  background: linear-gradient(white, white) no-repeat center/2px 
+  100%;
+}
+
+.parallax, .parallaxEven {
   height: 30vh;
   width: 100vw;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
 }
 
-.nextAcademyPic {
-  width: 100vw;
+.image {
+  width: 100%;
   height: auto;
-  position: absolute;
+}
+
+.trigger5 {
+  margin-top: -20vh;
+  height: 5vh;
+}
+
+.content, .contentEven, .content2 {
+  margin: 5vh 0px 10vh;
+  padding: 3vh 0 2vh;
+  background-color: black;
+}
+
+.content2 {
+  margin: 17vh 0 13vh;
+}
+
+.diamond, .diamond2, .diamondEven {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  margin: 0px auto 20px;
+  transform: rotate(45deg);
+}
+
+.period {
+  font-size: 0.7em;
+  font-style: italic;
 }
 
 .skills {
-  font-size: 0.7em;
-  font-style: italic;
-  margin: 20px 0px 0px;
-}
-
-.box {
-  background: linear-gradient(white, white) no-repeat center/2px 100%;
-  height: 20vh;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-.footer {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  padding: 20px 30px;
-  margin: 0 0 0 20px;
-  text-align: left;
-}
-
-.footer a {
-  color: black;
-}
-
-.myContactInfo {
-  margin: 0px 0px -5px;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.contactInfo {
   font-size: 0.8em;
-  margin: 10px 0px 60px;
-  line-height: 10px;
-}
-
-.contactIcon {
-  padding: 0 7px 0 0;
+  font-style: italic;
 }
 
 /* MEDIA QUERY */
-@media only screen and (min-width: 768px) {
-  .logo {
-    width: 15vw
+@media only screen and (max-width: 370px) {
+  .logo2 {
+    width: 50vw;
   }
 
-  .nextAcademyPic {
-    width: 40vw;
-    margin-left: 40px;
+  .logo3 {
+    width: 25vw;
+  }
+
+  .contactInfo {
+    margin-top: 7vh;
+    line-height: 10px;
+  }
+
+  .project {
+    height: 39vw;
+    width: 39vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    height: 25vh;
+    width: auto;
+  }
+
+  .contactInfo {
+    margin-top: 15vh;
+  }
+
+  .project {
+    height: 28vw;
+    width: 28vw;
+    left: 20vw;
+  }
+
+  .project2 {
+    left: 35vw;
+  }
+
+  .project3 {
+    left: 50vw;
   }
 
   .parallax {
-    height: 40vh;
+    width: 45vw;
+    height: 30vh;
+  }
+  
+  .parallaxEven {
+    position: relative;
+    overflow: hidden;
+    left: 55vw;
+  }
+
+  .logo2 {
+    width: 30vw;
+  }
+
+  .logo3 {
+    width: 20vw;
+  }
+
+  .closeButton {
+    height: 5vw;
+    width: 5vw;
+    right: 20vw;
+    top: 3vh;
+  }
+
+  .projectDetails {
+    padding: 5vh 20vw;
+  }
+
+  .timelineTitle {
+    margin-bottom: 0px;
+  }
+
+  .trigger, .trigger2 {
+    height: 15vh;
+    margin-bottom: -5vh;
+  }
+  
+  .trigger3 {
+    margin: 0;
+    height: 10vh;
+  }
+
+  .trigger4 {
+    height: 15vh;
+  }
+  
+  .trigger {
+    background-color: black;
+  }
+
+  .diamond {
+    margin: 10px 0px 30px;
+  }
+
+  .diamond2 {
+    margin: 10px auto 30px;
+  }
+
+  .content {
+    left: 48%;
+    text-align: left;
+    margin-top: -30vh;
+    padding-left: 1.3vw;
+    position: absolute;
+  }
+  
+  .contentEven {
+    right: 48%;
+    text-align: right;
+    margin-top: -30vh;
+    padding-right: 1.3vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .content2 {
+    margin: 0;
+    padding: 3vh;
+  }
+
+  .project:hover {
+    background-color: rgb(206, 205, 205);
+    border: 5px double black;
+    color: black;
+    font-weight: bold;
+  }
+
+  .contactLink:hover {
+    text-decoration: none;
+    color: gray;
+  }
+
+  .closeButton:hover {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1028px) {
+  .logo2 {
+    margin-top: -10vh;
+    width: 30vw;
+  }
+
+  .logo3 {
+    width: 15vw;
+  }
+
+  .project {
+    height: 15vw;
+    width: 15vw;
+    top: 5vh;
+    left: 26vw;
+    cursor: pointer;
+  }
+
+  .project2 {
+    left: 43vw;
+    margin-top: -5vh;
+  }
+  
+  .project3 {
+    left: 60vw;
+    margin-top: -10vh;
+  }
+
+  .closeButton {
+    height: 3vw;
+    width: 3vw;
+  }
+
+  .projectDetails {
+    padding: 5vh 30vw;
+  }
+
+  .parallax {
+    height: 50vh;
+  }
+  
+  .content, .contentEven {
+    padding: 3vh 0 2vh;
+    margin-top: -43vh;
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
+  }
+
+  .content2 {
+    padding: 3vh;
   }
 }
 
@@ -141,6 +404,19 @@
     opacity: 0.6;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     opacity: 1;
   }
 }

@@ -1,0 +1,43 @@
+.back2Top {
+  margin: 20vh 0px 10px;
+  cursor: pointer;
+}
+
+.footer {
+  margin: 0 20px;
+  border-top: 3px double white;
+  padding: 15px 0px 2px;
+  font-size: 0.8em;
+  line-height: 8px;
+}
+
+.footerRow {
+  margin-bottom: 30px;
+}
+
+.footer a, .footer i {
+  color: white;
+  padding: 0 7px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 30px 0px 10px;
+    margin: 0 80px;
+  }
+
+  .back2Top:hover, .footer a:hover {
+    text-decoration: none;
+    color: gray;
+  }
+
+  .back2Top {
+    margin: 10vh 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 1028px) {
+  .back2Top {
+    margin: 20vh 0px 10px;
+  }
+}

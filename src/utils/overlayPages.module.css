@@ -1,0 +1,55 @@
+.projectTitle {
+  line-height: 7vh;
+}
+
+.projectFeatures {
+  font-size: 0.9em;
+  text-align: left;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectResponsibility {
+  border-top: 1px solid white;
+  border-bottom: 3px double white;
+  padding: 2vh 0 0;
+  margin: 5vh 0;
+  font-size: 1.1em;
+  line-height: 15px;
+}
+
+.projectLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3vh;
+}
+
+.projectLink {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  margin: 0 10px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+}
+
+.projectIcon {
+  font-size: 1.5em;
+  padding: 5px 0 5px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .projectLink:hover {
+    text-decoration: none;
+    color: gray;
+  }
+  
+}
