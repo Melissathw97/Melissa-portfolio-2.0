@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-// import Mainpage from './pages/Mainpage.js'
-import Mainpage2 from './pages/Mainpage2';
+import Mainpage from './pages/Mainpage';
 
 
 function App() {
@@ -14,13 +13,28 @@ function App() {
     });
   }
 
+  const [overlay, setOverlay] = useState(false);
+  const [overlayPage, setOverlayPage] = useState(0);
+
+  const showOverlay = (e) => {
+    setOverlayPage(e.target.id);
+    setOverlay(true);
+  }
+
+  const hideOverlay = () => {
+    setOverlay(false);
+  }
+
   return (
     <div className="App">
       <Route exact path="/">
-        <Mainpage2
-          ScrollToTop={ScrollToTop} />
-        {/* <Mainpage
-          ScrollToTop={ScrollToTop} /> */}
+        <Mainpage
+          ScrollToTop={ScrollToTop}
+          overlay={overlay}
+          overlayPage={overlayPage}
+          showOverlay={showOverlay}
+          hideOverlay={hideOverlay}
+        />
       </Route>
     </div>
   );
