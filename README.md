@@ -1,7 +1,7 @@
 ## Short Intro
 <p>Unfortunately, I didn't account for the responsiveness of my first portfolio, https://melissathw.netlify.app/</p>
 <p>So I decided to restart on this little project as a chance to practice my media query skills! :D</p>
-<br/>
+<img src="src/assets/images/welcome.png" />
 <p>P.S. I feel my first portfolio is more comprehensive so do check it out (desktop only, please)</p>
 
 ## Hope you enjoy 😌
