@@ -128,8 +128,13 @@ const Mainpage2 = ({ ScrollToTop, overlay, overlayPage, showOverlay, hideOverlay
                       +6012-213 1997
                     </p>
                     <p>
-                      <i className={`fas fa-envelope ${styles.contactIcon}`} />
-                      melissathw97@gmail.com
+                      <a
+                        href="mailto:melissathw97@gmail.com"
+                        className={styles.contactLink}
+                      >
+                        <i className={`fas fa-envelope ${styles.contactIcon}`} />
+                        melissathw97@gmail.com
+                      </a>
                     </p>
                     <p>
                       <a
