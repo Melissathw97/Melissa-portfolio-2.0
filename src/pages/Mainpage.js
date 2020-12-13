@@ -42,10 +42,10 @@ const Mainpage2 = ({ ScrollToTop, overlay, overlayPage, showOverlay, hideOverlay
                   }}
                   stagger={0.1}
                 >
-                  <p>A medical biotech graduate.</p>
-                  <p>An amateur graphic designer.</p>
                   <p>A certified web developer.</p>
                   <p>A ui/ux design enthusiast.</p>
+                  <p>A medical biotech graduate.</p>
+                  <p>An amateur graphic designer.</p>
                 </Tween>
               </Timeline>
             </div>
