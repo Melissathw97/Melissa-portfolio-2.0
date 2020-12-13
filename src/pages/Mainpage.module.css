@@ -147,8 +147,7 @@
 }
 
 .middleLine {
-  background: linear-gradient(white, white) no-repeat center/2px 
-  100%;
+  background: linear-gradient(white, white) no-repeat center/2px 100%;
 }
 
 .parallax, .parallaxEven {
@@ -282,10 +281,6 @@
 
   .trigger4 {
     height: 15vh;
-  }
-  
-  .trigger {
-    background-color: black;
   }
 
   .diamond {

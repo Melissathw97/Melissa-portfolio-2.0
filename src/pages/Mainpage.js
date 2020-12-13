@@ -251,10 +251,80 @@ const Mainpage2 = ({ ScrollToTop, overlay, overlayPage, showOverlay, hideOverlay
       <h4 className={styles.sectionTitle}>My timeline.</h4>
       <div className={styles.middleLine}>
         <Controller>
+          <div id="newTrigger" className={styles.trigger} />
+          <Scene
+            duration={400}
+            triggerElement="#newTrigger"
+            reverse={false}
+          >
+            <Timeline wrapper={<div className={styles.content2} />}>
+              <Tween
+                staggerFrom={{
+                  opacity: 0,
+                }}
+                stagger={0.1}
+              >
+                <div className={styles.diamond2} />
+                <p>2020</p>
+                <p className={styles.period}>
+                  ( June - Present )
+                </p>
+                <p>SushiVid Sdn Bhd</p>
+                <p>Junior Front-End Developer</p>
+              </Tween>
+            </Timeline>
+          </Scene>
+          {/* <Scene
+            duration={1000}
+            triggerHook="onEnter"
+          >
+            <Timeline
+              wrapper={<div className={styles.parallax} />}
+            >
+              <Tween
+                position="0"
+                from={{
+                  yPercent: -18,
+                  scale: 1,
+                }}
+                to={{
+                  yPercent: 3,
+                  scale: 1.1
+                }}
+              >
+                <img
+                  src={nextAcademy}
+                  alt="Next Academy"
+                  className={styles.image}
+                />
+              </Tween>
+            </Timeline>
+          </Scene> */}
+          {/* <Scene
+            duration={400}
+            triggerHook="onEnter"
+            reverse={false}
+          >
+            <Timeline wrapper={<div className={styles.content} />}>
+              <Tween
+                staggerFrom={{
+                  opacity: 0,
+                }}
+                stagger={0.1}
+              >
+                <div className={styles.diamond} />
+                <p>2020</p>
+                <p className={styles.period}>( January - March )</p>
+                <p>Next Academy</p>
+                <p>Full-stack Web Development</p>
+                <p className={styles.skills}>HTML, CSS, Javascript, React, Python Flask</p>
+              </Tween>
+            </Timeline>
+          </Scene> */}
           <div id="trigger" className={styles.trigger} />
           <Scene
             duration={1000}
-            triggerHook="onEnter"
+            triggerElement="#newTrigger"
           >
             <Timeline
               wrapper={<div className={styles.parallax} />}
